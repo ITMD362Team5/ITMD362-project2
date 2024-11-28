@@ -119,6 +119,12 @@ body {
   text-align: center;
 }
 
+input[type="date"] {
+  font-family: 'Mono Sans', 'DM Sans', sans-serif;
+  color: #606060;
+  text-transform: uppercase;
+}
+
 .form-elements button {
   font-family: 'Mono Sans', 'DM Sans', sans-serif;
   font-size: 1em;
