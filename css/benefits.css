@@ -184,15 +184,12 @@ body {
 }
 
 @media screen and (min-width: 600px) {
-    .nav {
-        font-size: 1.2em;
-    }
 
     .nav {
         font-size: 1.5em;
-      }
+    }
     
-      .nav a {
+    .nav a {
         margin-right: 20px;
-      }
+    }
 }
