@@ -228,17 +228,24 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 125px; /* Desired fixed width for all images */
-  height: 75px; /* Desired fixed height for all images */
+  width: 125px;
+  /* Desired fixed width for all images */
+  height: 75px;
+  /* Desired fixed height for all images */
   margin: auto;
-  margin-top: 5px; /* Space between the text and the image */
-  overflow: hidden; /* Ensures nothing extends beyond the dimensions */
+  margin-top: 5px;
+  /* Space between the text and the image */
+  overflow: hidden;
+  /* Ensures nothing extends beyond the dimensions */
 }
 
 .card-image img {
-  width: 100%; /* Scales the image to fit the width of .card-image */
-  height: 100%; /* Scales the image to fit the height of .card-image */
-  object-fit: cover; /* Covers the area without distorting ratio */
+  width: 100%;
+  /* Scales the image to fit the width of .card-image */
+  height: 100%;
+  /* Scales the image to fit the height of .card-image */
+  object-fit: cover;
+  /* Covers the area without distorting ratio */
 }
 
 @media screen and (min-width: 600px) {
@@ -302,7 +309,7 @@ footer {
     vertical-align: middle;
     word-wrap: break-word;
   }
-  
+
   th {
     background-color: #f4f4f4;
   }
