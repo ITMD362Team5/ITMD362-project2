@@ -1,3 +1,20 @@
+// signup
+let current = 1;
+function showStep(step) {
+  document.querySelectorAll(".step").forEach((element, index) => {
+    element.style.display = index === step - 1 ? "block" : "none";
+  });
+}
+
+function nextStep() {
+  if (current < 3) {
+    current++;
+    showStep(current);
+  }
+}
+
+showStep(current);
+
 // benefits
 document.getElementById('loginButton').addEventListener('click', function () {
   alert("Redirecting to login page...");
@@ -23,19 +40,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-
-// signup
-let current = 1;
-function showStep(step) {
-  document.querySelectorAll(".step").forEach((element, index) => {
-    element.style.display = index === step - 1 ? "block" : "none";
-  });
-}
-
-function nextStep() {
-  if (current < 3) {
-    current++;
-    showStep(current);
-  }
-}
-showStep(current);
