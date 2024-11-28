@@ -1,35 +1,68 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Mono Sans', 'DM Sans', sans-serif;
     background-color: #f9f9f9;
     color: #333;
 }
-.header {
-    background-color: #002b7f;
+.nav {
+    font-family: 'Mono Sans', 'DM Sans', sans-serif;
+    background-color: #ffffff;
     padding: 10px;
+    box-shadow: 3px 3px 3px rgba(1, 1, 1, 0.1);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: white;
-}
-.header a {
-    color: white;
-    margin: 0 15px;
+  }
+  
+  .nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .nav li {
+    height: 30px;
+  }
+  
+  .nav a {
     text-decoration: none;
-    font-size: 14px;
-}
-.header button {
-    background-color: #0074c2;
+    height: 100%;
+    padding: 0 10px;
+    align-items: center;
+    display: flex;
+    color: #016FD0;
+    font-size: 0.8em;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .nav a:hover {
+    color: #00427c;
+  }
+  
+  .nav img {
+    width: 50px;
+    margin-left: 10px;
+  }
+  
+  #loginButton {
+    background-color: #016FD0;
     color: white;
     border: none;
     padding: 5px 15px;
     cursor: pointer;
-    transition: background-color 0.3s;
     border-radius: 5px;
-}
-.header button:hover {
-    background-color: #005a94;
-}
+    transition: all 0.3s ease;
+    font-size: 1em;
+  }
+  
+  #loginButton:hover {
+    background-color: #00427c;
+  }
+
 .main {
+    font-family: 'Mono Sans', 'DM Sans', sans-serif;
     text-align: center;
     padding: 40px;
     background-color: #002b7f;
@@ -50,6 +83,7 @@ body {
 
 /* Content Section */
 .content {
+    font-family: 'Mono Sans', 'DM Sans', sans-serif;
     padding: 40px;
     text-align: center;
     background-color: #f3f3f3;
@@ -60,6 +94,7 @@ body {
     margin-bottom: 20px;
 }
 .features {
+    
     display: flex;
     justify-content: center;
     gap: 30px;
@@ -99,6 +134,7 @@ body {
 }
 
 .card {
+    font-family: 'Mono Sans', 'DM Sans', sans-serif;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -144,5 +180,16 @@ body {
     }
     .card-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (min-width: 600px) {
+
+    .nav {
+        font-size: 1.5em;
+    }
+    
+    .nav a {
+        margin-right: 20px;
     }
 }

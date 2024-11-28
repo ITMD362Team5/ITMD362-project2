@@ -32,14 +32,14 @@ body {
 .nav a {
   text-decoration: none;
   height: 100%;
-  padding: 0 20px;
+  padding: 0 10px;
   align-items: center;
   display: flex;
   color: #016FD0;
-  font-size: 1.2em;
+  font-size: 0.8em;
   transition: all 0.3s ease;
   font-weight: bold;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .nav a:hover {
@@ -80,8 +80,8 @@ body {
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: 90%;
-  max-width: 450px;
-  padding: 20px;
+  max-width: 350px;
+  padding: 30px;
 }
 
 .form-container h1 {
@@ -92,7 +92,7 @@ body {
 }
 
 .form-container h2 {
-  font-size: 1.2em;
+  font-size: 1.1em;
   padding-bottom: 20px;
   text-align: center;
 }
@@ -160,12 +160,20 @@ button:hover {
     width: 80%;
     font-size: 1.1em;
   }
+
+  .nav {
+    font-size: 1.5em;
+  }
+
+  .nav a {
+    margin-right: 20px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
   .form-container {
     max-width: 600px;
-    padding: 30px;
+    padding: 40px;
   }
 
   .form-container h1 {
@@ -182,7 +190,7 @@ button:hover {
   }
 
   .form-elements button {
-    width: 80%;
+    width: 100%;
     font-size: 1.2em;
   }
 }
