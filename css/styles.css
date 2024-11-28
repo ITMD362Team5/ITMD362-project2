@@ -10,13 +10,15 @@ html {
 .container {
   display: flex;
   /* Enables flexbox layout */
+  flex-direction: column;
   min-height: 100vh;
   /* Minimum height of 100% of the viewport height */
 }
 
 .nav {
   background-color: #ffffff;
-  padding: 10px;
+  margin: 0;
+  padding: 3.5px 10px;
   box-shadow: 3px 3px 3px rgba(1, 1, 1, 0.1);
   display: flex;
   justify-content: space-between;
@@ -41,10 +43,10 @@ html {
   align-items: center;
   display: flex;
   color: #016FD0;
-  font-size: 1em;
+  font-size: 0.8em;
   transition: all 0.3s ease;
   font-weight: bold;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .nav a:hover {
@@ -72,20 +74,7 @@ html {
 }
 
 .sidebar {
-  position: fixed;
-  background-color: #eef1f4;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 20px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-  top: 150px;
-  /* Height of your header, adjust accordingly */
-  bottom: 150px;
-  width: 175px;
-  left: 30px;
-  overflow-y: auto;
-  /* Enables scrolling for overflow content */
+  display: none;
 }
 
 .sidebar nav h2 {
@@ -129,17 +118,10 @@ html {
 }
 
 .main-content {
-  flex-grow: 1;
-  /* Takes up the remaining space */
-  margin-left: 250px;
-  /* Equal to the width of the sidebar */
-  margin-top: 60px;
-  /* Adjust this value to the height of your header */
-  padding: 20px;
+  margin: 10px;
+  padding: 10px;
   background-color: #fff;
-  /* Background color for contrast */
   overflow: auto;
-  /* Adds scroll to main content if content overflows */
 }
 
 .promo-banner {
@@ -199,7 +181,7 @@ td {
   /* Sets a fixed height for each cell */
   width: auto;
   /* Sets a fixed width for each cell */
-  padding: 10px;
+  padding: 5px 3px;
   /* Adds padding inside each cell */
   text-align: center;
   /* Aligns text to the left */
@@ -259,63 +241,69 @@ footer {
   object-fit: cover; /* Covers the area without distorting ratio */
 }
 
-@media (max-width: 768px) {
+@media screen and (min-width: 600px) {
+  .nav {
+    margin: 0;
+    padding: 0.3px 10px;
+    font-size: 1.5em;
+  }
+
+  .nav a {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nav {
+    margin: 0;
+    padding: 3.5px 10px;
+    font-size: 1.5em;
+  }
+
+  .nav a {
+    margin-right: 20px;
+  }
+
   .sidebar {
-    display: none;
+    position: fixed;
+    background-color: #eef1f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    top: 130px;
+    bottom: 150px;
+    width: 175px;
+    left: 30px;
+    overflow-y: auto;
   }
 
   .main-content {
-    margin-left: 0px;
-    /* Removes the margin to allow content to center */
-    margin-top: 250px;
-    padding: 10px;
-    /* Adjust padding for smaller screens */
-  }
-
-  .container {
-    flex-direction: row;
-    /* Stacks sidebar and main content vertically */
-  }
-
-  .sidebar nav ul {
-    flex-direction: column;
-    /* Stacks nav items vertically */
-  }
-
-  thead {
-    display: none;
-    /* Hides the thead element on small screens */
-  }
-
-  th,
-  td {
-    height: auto;
-    width: auto;
-    padding: 8px;
-    font-size: 14px;
-    /* Smaller text to fit more content on the screen */
-  }
-
-  th,
-  td {
-    display: block;
-    /* Changes layout to block for better stacking */
+    flex-grow: 1;
+    margin-left: 250px;
+    margin-top: 10px;
+    padding: 20px;
+    background-color: #fff;
+    overflow: auto;
   }
 
   table {
-    display: block;
-    margin-top: 20px;
     width: 100%;
+    border-collapse: collapse;
   }
 
-  button {
-    padding: 5px;
-    font-size: 12px;
-    width: 100%;
-    /* Full-width buttons for easier clicking on mobile */
+  td {
+    border: 1px solid #ccc;
+    height: 75px;
+    width: auto;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    word-wrap: break-word;
   }
-
-  .card-image {
-    display: none;
+  
+  th {
+    background-color: #f4f4f4;
   }
 }

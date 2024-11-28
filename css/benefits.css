@@ -3,6 +3,7 @@ body {
     background-color: #f9f9f9;
     color: #333;
 }
+
 .nav {
     font-family: 'Mono Sans', 'DM Sans', sans-serif;
     background-color: #ffffff;
@@ -76,7 +77,7 @@ body {
 }
 
 .main h1 {
-    font-size: 36px;
+    font-size: 3em;
     margin-bottom: 10px;
     font-weight: bold;
 }
@@ -84,7 +85,7 @@ body {
 /* Content Section */
 .content {
     font-family: 'Mono Sans', 'DM Sans', sans-serif;
-    padding: 40px;
+    padding: 20px;
     text-align: center;
     background-color: #f3f3f3;
 }
@@ -92,14 +93,14 @@ body {
 .content h2 {
     color: #002b7f;
     margin-bottom: 20px;
+    font-size: 1.2em;
 }
 .features {
-    
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     gap: 30px;
     margin-top: 20px;
-    flex-wrap: wrap;
+    align-items: center;
 }
 .feature {
     background-color: white;
@@ -128,7 +129,7 @@ body {
 }
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     gap: 20px;
     padding: 20px;
 }
@@ -174,15 +175,6 @@ body {
     border-bottom: 1px solid #ddd;
 }
 
-@media (max-width: 768px) {
-    .features {
-        flex-direction: column;
-    }
-    .card-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
 @media screen and (min-width: 600px) {
 
     .nav {
@@ -191,5 +183,55 @@ body {
     
     .nav a {
         margin-right: 20px;
+    }
+    
+    .features {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .main h1 {
+        font-size: 2.5em;
+    }
+
+    .card-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .card img {
+        height: 190px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .nav {
+        font-size: 1.5em;
+    }
+    
+    .nav a {
+        margin-right: 20px;
+    }
+
+    .card-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .card img {
+        height: 375px;
+    }
+
+    .features {
+        justify-content: center;
     }
 }
