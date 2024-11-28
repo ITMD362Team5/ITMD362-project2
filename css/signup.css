@@ -39,7 +39,7 @@ body {
   font-size: 0.8em;
   transition: all 0.3s ease;
   font-weight: bold;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .nav a:hover {
@@ -162,7 +162,11 @@ button:hover {
   }
 
   .nav {
-    font-size: 1.2em;
+    font-size: 1.5em;
+  }
+
+  .nav a {
+    margin-right: 20px;
   }
 }
 
