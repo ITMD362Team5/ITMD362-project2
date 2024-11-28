@@ -42,15 +42,10 @@ html {
   padding: 0 10px;
   align-items: center;
   display: flex;
-  color: #016FD0;
   font-size: 0.8em;
   transition: all 0.3s ease;
   font-weight: bold;
   margin-right: 10px;
-}
-
-.nav a:hover {
-  color: #00427c;
 }
 
 .nav img {
@@ -58,18 +53,23 @@ html {
   margin-left: 10px;
 }
 
-#loginButton {
-  background-color: #016FD0;
-  color: white;
-  border: none;
-  padding: 5px 15px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-  font-size: 1em;
+.other {
+  color: #016FD0;
 }
 
-#loginButton:hover {
+.other:hover {
+  color: #00427c;
+}
+
+.enroll {
+  background-color: #016FD0;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.enroll:hover {
   background-color: #00427c;
 }
 
