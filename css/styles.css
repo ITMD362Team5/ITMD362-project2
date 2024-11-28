@@ -17,7 +17,8 @@ html {
 
 .nav {
   background-color: #ffffff;
-  padding: 10px;
+  margin: 0;
+  padding: 3.5px 10px;
   box-shadow: 3px 3px 3px rgba(1, 1, 1, 0.1);
   display: flex;
   justify-content: space-between;
@@ -240,70 +241,22 @@ footer {
   object-fit: cover; /* Covers the area without distorting ratio */
 }
 
-@media (min-width: 600) {
-  
-  .sidebar {
-    display: none;
+@media screen and (min-width: 600px) {
+  .nav {
+    margin: 0;
+    padding: 0.3px 10px;
+    font-size: 1.5em;
   }
 
-  .main-content {
-    margin-left: 0px;
-    /* Removes the margin to allow content to center */
-    margin-top: 250px;
-    padding: 10px;
-    /* Adjust padding for smaller screens */
-  }
-
-  .container {
-    flex-direction: row;
-    /* Stacks sidebar and main content vertically */
-  }
-
-  .sidebar nav ul {
-    flex-direction: column;
-    /* Stacks nav items vertically */
-  }
-
-  thead {
-    display: none;
-    /* Hides the thead element on small screens */
-  }
-
-  th,
-  td {
-    height: auto;
-    width: auto;
-    padding: 8px;
-    font-size: 14px;
-    /* Smaller text to fit more content on the screen */
-  }
-
-  th,
-  td {
-    display: block;
-    /* Changes layout to block for better stacking */
-  }
-
-  table {
-    display: block;
-    margin-top: 20px;
-    width: 100%;
-  }
-
-  button {
-    padding: 5px;
-    font-size: 12px;
-    width: 100%;
-    /* Full-width buttons for easier clicking on mobile */
-  }
-
-  .card-image {
-    display: none;
+  .nav a {
+    margin-right: 20px;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .nav {
+    margin: 0;
+    padding: 3.5px 10px;
     font-size: 1.5em;
   }
 
