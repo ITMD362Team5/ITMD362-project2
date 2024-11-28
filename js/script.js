@@ -1,28 +1,28 @@
 // benefits
-document.getElementById('loginButton').addEventListener('click', function() {
-    alert("Redirecting to login page...");
+document.getElementById('loginButton').addEventListener('click', function () {
+  alert("Redirecting to login page...");
 });
 
-window.addEventListener('scroll', function() {
-    const mainSection = document.querySelector('.main');
-    const scrollPosition = window.scrollY;
-    mainSection.style.backgroundPositionY = scrollPosition * 0.5 + 'px';
+window.addEventListener('scroll', function () {
+  const mainSection = document.querySelector('.main');
+  const scrollPosition = window.scrollY;
+  mainSection.style.backgroundPositionY = scrollPosition * 0.5 + 'px';
 });
 
 // cards
-document.addEventListener("DOMContentLoaded", function() {
-    const buttons = document.querySelectorAll('.card button');
-  
-    buttons.forEach(button => {
-        button.addEventListener('mouseover', function() {
-            this.style.backgroundColor = '#005699';
-        });
-  
-        button.addEventListener('mouseout', function() {
-            this.style.backgroundColor = '#0077CC';
-        });
+document.addEventListener("DOMContentLoaded", function () {
+  const buttons = document.querySelectorAll('.card button');
+
+  buttons.forEach(button => {
+    button.addEventListener('mouseover', function () {
+      this.style.backgroundColor = '#005699';
+    });
+
+    button.addEventListener('mouseout', function () {
+      this.style.backgroundColor = '#0077CC';
     });
   });
+});
 
 // signup
 let current = 1;
