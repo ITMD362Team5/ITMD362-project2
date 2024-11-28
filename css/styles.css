@@ -37,11 +37,11 @@ html {
 .nav a {
   text-decoration: none;
   height: 100%;
-  padding: 0 20px;
+  padding: 0 10px;
   align-items: center;
   display: flex;
   color: #016FD0;
-  font-size: 1.2em;
+  font-size: 1em;
   transition: all 0.3s ease;
   font-weight: bold;
   margin-right: 20px;
@@ -277,7 +277,7 @@ footer {
     /* Stacks sidebar and main content vertically */
   }
 
-  nav ul {
+  .sidebar nav ul {
     flex-direction: column;
     /* Stacks nav items vertically */
   }
