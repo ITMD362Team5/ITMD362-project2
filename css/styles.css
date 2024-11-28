@@ -10,6 +10,7 @@ html {
 .container {
   display: flex;
   /* Enables flexbox layout */
+  flex-direction: column;
   min-height: 100vh;
   /* Minimum height of 100% of the viewport height */
 }
@@ -41,10 +42,10 @@ html {
   align-items: center;
   display: flex;
   color: #016FD0;
-  font-size: 1em;
+  font-size: 0.8em;
   transition: all 0.3s ease;
   font-weight: bold;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .nav a:hover {
@@ -72,20 +73,7 @@ html {
 }
 
 .sidebar {
-  position: fixed;
-  background-color: #eef1f4;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 20px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-  top: 150px;
-  /* Height of your header, adjust accordingly */
-  bottom: 150px;
-  width: 175px;
-  left: 30px;
-  overflow-y: auto;
-  /* Enables scrolling for overflow content */
+  display: none;
 }
 
 .sidebar nav h2 {
@@ -129,17 +117,10 @@ html {
 }
 
 .main-content {
-  flex-grow: 1;
-  /* Takes up the remaining space */
-  margin-left: 250px;
-  /* Equal to the width of the sidebar */
-  margin-top: 60px;
-  /* Adjust this value to the height of your header */
-  padding: 20px;
+  margin: 10px;
+  padding: 10px;
   background-color: #fff;
-  /* Background color for contrast */
   overflow: auto;
-  /* Adds scroll to main content if content overflows */
 }
 
 .promo-banner {
@@ -199,7 +180,7 @@ td {
   /* Sets a fixed height for each cell */
   width: auto;
   /* Sets a fixed width for each cell */
-  padding: 10px;
+  padding: 5px 3px;
   /* Adds padding inside each cell */
   text-align: center;
   /* Aligns text to the left */
@@ -259,7 +240,8 @@ footer {
   object-fit: cover; /* Covers the area without distorting ratio */
 }
 
-@media (max-width: 768px) {
+@media (min-width: 600) {
+  
   .sidebar {
     display: none;
   }
@@ -317,5 +299,75 @@ footer {
 
   .card-image {
     display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nav {
+    font-size: 1.5em;
+  }
+
+  .nav a {
+    margin-right: 20px;
+  }
+
+  .sidebar {
+    position: fixed;
+    background-color: #eef1f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    top: 130px;
+    /* Height of your header, adjust accordingly */
+    bottom: 150px;
+    width: 175px;
+    left: 30px;
+    overflow-y: auto;
+    /* Enables scrolling for overflow content */
+  }
+
+  .main-content {
+    flex-grow: 1;
+    /* Takes up the remaining space */
+    margin-left: 250px;
+    /* Equal to the width of the sidebar */
+    margin-top: 10px;
+    /* Adjust this value to the height of your header */
+    padding: 20px;
+    background-color: #fff;
+    /* Background color for contrast */
+    overflow: auto;
+    /* Adds scroll to main content if content overflows */
+  }
+
+  table {
+    width: 100%;
+    /* Adjusts table to use full width of its container */
+    border-collapse: collapse;
+    /* Collapses borders between cells for a clean look */
+  }
+
+  td {
+    border: 1px solid #ccc;
+    /* Adds a light grey border around each cell */
+    height: 75px;
+    /* Sets a fixed height for each cell */
+    width: auto;
+    /* Sets a fixed width for each cell */
+    padding: 10px;
+    /* Adds padding inside each cell */
+    text-align: center;
+    /* Aligns text to the left */
+    vertical-align: middle;
+    /* Aligns content to the top of the cell */
+    word-wrap: break-word;
+    /* Ensures text wraps to avoid overflow */
+  }
+  
+  th {
+    background-color: #f4f4f4;
+    /* Light grey background for header cells */
   }
 }
